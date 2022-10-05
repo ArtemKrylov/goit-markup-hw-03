@@ -5,10 +5,35 @@ h3,
 h4,
 h5,
 h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 /*--------------------*/
@@ -28,8 +53,8 @@ ul {
   --team-section-background-color: #f5f4fa;
   --filter-button-background-color: #f5f4fa;
 
-  --main-font-family: "Roboto", sans-serif;
-  --logo-font-family: "Raleway", sans-serif;
+  --main-font-family: 'Roboto', sans-serif;
+  --logo-font-family: 'Raleway', sans-serif;
 }
 /*--------------------*/
 
@@ -44,23 +69,10 @@ body {
 
 /* Components */
 .container {
-  max-width: 1200px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
-}
-
-.button {
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
 }
 
 .cite-logo {
@@ -102,9 +114,9 @@ body {
 
 /* styles for header*/
 .header {
-  padding: 32px 0;
+  padding: 24px 0;
 
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 
   font-weight: 500;
   line-height: 1.14;
@@ -130,14 +142,15 @@ body {
 
 .page-navigation-list {
   display: flex;
-}
-
-.page-navigation-listitem:not(:last-of-type) {
-  margin-right: 50px;
+  column-gap: 50px;
 }
 
 .navigation-link {
   color: var(--title-text-color);
+}
+
+.current {
+  color: var(--accent-color);
 }
 
 .header-contacts {
@@ -223,7 +236,7 @@ body {
 /* styles for studio page main  */
 /* banner section*/
 .banner {
-  padding: 200px 452px;
+  padding: 200px 0;
 
   text-align: center;
 
@@ -261,17 +274,13 @@ body {
 /* /banner section*/
 
 /* peculiarities section*/
-.peculiarities {
-  padding-bottom: 0;
-}
-
 .peculiarities-cards {
   display: flex;
   gap: 30px;
 }
 
 .peculiarity-card {
-  flex-basis: 270px;
+  flex-grow: 1;
 }
 
 .peculiarity-card-title {
@@ -287,15 +296,16 @@ body {
 /* /peculiarities section*/
 
 /* proficiencies section*/
+.proficiencies {
+  padding-top: 0;
+}
+
 .proficiencies-cards {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
 
-.proficiencies-card {
-  max-width: 370px;
-}
 /* /proficiencies section*/
 
 /* team section*/
@@ -314,6 +324,8 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
+  background-color: #fff;
+
   text-align: center;
 }
 
@@ -324,7 +336,7 @@ body {
 }
 
 .team-card-info {
-  padding: 30px 10px;
+  padding: 30px 0;
 }
 
 .teamcard-name {
